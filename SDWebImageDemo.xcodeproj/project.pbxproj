@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C72EB518E1E62E47C1BE8BB /* libPods-SDWebImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D0B38FA2958EE712F59CF /* libPods-SDWebImageDemo.a */; };
 		D8A616631B55D58B00D671EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A616621B55D58B00D671EF /* AppDelegate.swift */; };
 		D8A616651B55D58B00D671EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A616641B55D58B00D671EF /* ViewController.swift */; };
 		D8A616681B55D58B00D671EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A616661B55D58B00D671EF /* Main.storyboard */; };
 		D8A6166A1B55D58B00D671EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A616691B55D58B00D671EF /* Images.xcassets */; };
 		D8A6166D1B55D58B00D671EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A6166B1B55D58B00D671EF /* LaunchScreen.xib */; };
 		D8A616791B55D58B00D671EF /* SDWebImageDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A616781B55D58B00D671EF /* SDWebImageDemoTests.swift */; };
+		FA51722A9BB74FAE2CFF8223 /* Pods_SDWebImageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257C9795A00DB2D82AE83825 /* Pods_SDWebImageDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		257C9795A00DB2D82AE83825 /* Pods_SDWebImageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDWebImageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803ACEF283DDD53C310DE938 /* Pods-SDWebImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebImageDemo/Pods-SDWebImageDemo.release.xcconfig"; sourceTree = "<group>"; };
-		961D0B38FA2958EE712F59CF /* libPods-SDWebImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDWebImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A6165D1B55D58B00D671EF /* SDWebImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDWebImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A616611B55D58B00D671EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A616621B55D58B00D671EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C72EB518E1E62E47C1BE8BB /* libPods-SDWebImageDemo.a in Frameworks */,
+				FA51722A9BB74FAE2CFF8223 /* Pods_SDWebImageDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		D46B5DA40DD1E2349D3627F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				961D0B38FA2958EE712F59CF /* libPods-SDWebImageDemo.a */,
+				257C9795A00DB2D82AE83825 /* Pods_SDWebImageDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 		D8A616831B55D5AE00D671EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D8A616661B55D58B00D671EF /* Main.storyboard */,
 				D8A616691B55D58B00D671EF /* Images.xcassets */,
 				D8A6166B1B55D58B00D671EF /* LaunchScreen.xib */,
+				D8A616661B55D58B00D671EF /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -172,6 +172,7 @@
 				D8A6165A1B55D58B00D671EF /* Frameworks */,
 				D8A6165B1B55D58B00D671EF /* Resources */,
 				D4971C987D524779665B5B68 /* Copy Pods Resources */,
+				CB117D0F8111E1F4EA776526 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +272,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB117D0F8111E1F4EA776526 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageDemo/Pods-SDWebImageDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4971C987D524779665B5B68 /* Copy Pods Resources */ = {

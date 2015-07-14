@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class ViewController: UIViewController {
-
+    
+    // MARK: -------------------------
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    // MARK: -------------------------
+    // MARK: View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let imageURL = NSURL(string: "http://d3htz3r28tzhqz.cloudfront.net/KiS3PvJ7OX_DrQ2y7BwOdKI20WI=/original-6accf49e-e508-482b-a528-b93af035ad7c.GIF/yl1EQ_f-maxage-0.gif")
+        imageView.sd_setImageWithURL(imageURL)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
